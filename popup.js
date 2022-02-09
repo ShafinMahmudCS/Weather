@@ -2,7 +2,7 @@
 var input = document.querySelector('.inputText');
 var nameText = document.querySelector('#name');
 var temp = document.querySelector('#temp');
-var icon = document.querySelector('#icon');
+var img = document.querySelector('#weatherIcon');
 var condition = document.querySelector('#condition');
 var windSpeed = document.querySelector('#windSpeed');
 var button= document.querySelector('.submit');
@@ -18,6 +18,7 @@ fetch('https://api.weatherapi.com/v1/current.json?key=b3ec654ba3b54de5b9a1936272
   var tempData = data['current']['temp_c'];
   var conditionData = data['current']['condition']['text'];
   var windSpeedData = data['current']['wind_mph'];
+  var icon = data['current']['condition']['icon'];
 
   nameText.innerHTML = "Location: " + nameData + ", " + regionData;
   input.value ="";
@@ -26,6 +27,8 @@ fetch('https://api.weatherapi.com/v1/current.json?key=b3ec654ba3b54de5b9a1936272
   condition.innerHTML = conditionData;
 
   windSpeed.innerHTML = "WindSpeed(mph): " + windSpeedData; 
+  img.style.display = "block";
+  img.src = "https:" + icon;
 
 })
 

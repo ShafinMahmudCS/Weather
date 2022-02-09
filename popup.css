@@ -14,14 +14,24 @@ body {
   width: 400px;
 }
 
+#weatherCondition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header img {
+#logo {
   width: 17%;
+}
+
+#weatherIcon {
+  display: none;
 }
 
 p {

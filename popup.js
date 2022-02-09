@@ -8,7 +8,7 @@ var windSpeed = document.querySelector('#windSpeed');
 var button= document.querySelector('.submit');
 
 
-button.addEventListener('click', function(name){
+button.addEventListener('click', function(){
 
 fetch('https://api.weatherapi.com/v1/current.json?key=b3ec654ba3b54de5b9a193627220902&q='+input.value+'&aqi=no')
 .then(response => response.json())
@@ -32,5 +32,5 @@ fetch('https://api.weatherapi.com/v1/current.json?key=b3ec654ba3b54de5b9a1936272
 
 })
 
-.catch(err => alert("Wrong city name!"));
+.catch(err => alert("Wrong city name, please try again."));
 })

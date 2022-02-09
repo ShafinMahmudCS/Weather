@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="icon.png" alt="weatherLogo" />
+      <h1>Weather</h1>
+    </div>
+
+    <main>
+      <div class="input">
+        <input type="text" placeholder="Enter the city" class="inputText" />
+        <input type="submit" value="Submit" class="submit" />
+      </div>
+
+      <div class="displayWeather">
+        <h2 id="name"></h2>
+
+        <p id="temp"></p>
+
+        <p id="condition"></p>
+
+        <p id="windSpeed"></p>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
